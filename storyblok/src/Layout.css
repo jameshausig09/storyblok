@@ -1,0 +1,17 @@
+
+
+ .Navigation {
+    position: fixed;
+      bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: gray;
+  width: 100%;
+}
+.Navigation ul {
+  display:flex;
+  list-style-type: none;
+  gap: 10px;
+  padding-left: 0;
+  justify-content: center;
+}

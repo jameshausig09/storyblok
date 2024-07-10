@@ -5,6 +5,7 @@ import App from "./App";
 import { storyblokInit, apiPlugin } from "@storyblok/react";
 import Page from "./components/Page";
 import Teaser from "./components/Teaser";
+import Layout from "./Layout";
 
 storyblokInit({
   accessToken: "3brAcEv7vX2YdusLsBQyOAtt",
@@ -18,5 +19,6 @@ const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <App />
+    <Layout />
   </React.StrictMode>
 );

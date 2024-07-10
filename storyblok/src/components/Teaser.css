@@ -1,6 +1,50 @@
 .Teaser {
 padding: 20px;
 }
-.Teaser img {
-width: 100%;
+
+.overview {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.overview-item {
+    padding: 0 4em;
+    text-align: center;
+}
+
+.overview-box {
+    min-height: 400px;
+    width: 100%;
+    background-color: rgb(18, 200, 241);
+    text-align: center;
+    flex-direction: column;
+    border-radius: 8px;
+}
+
+.overview-box-item {
+    background: rgba(97, 101, 134, 0.5);
+    border-radius: 12px;
+    width: 80%;
+    margin-bottom: 30px;
+    padding: 20px;
+
+        display: flex;
+            align-items: center;
+            flex-direction: column;
+}
+.overview-box-main-image {
+    max-width: 250px;
+}
+.overview-box-text {
+    text-align: center;
+    padding-bottom: 70px;
+}
+
+.overview-box-text-first-child {
+    padding-bottom: 50px;
+}
+.overview-box-image {
+    width: 30%;
 }
