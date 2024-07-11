@@ -10,7 +10,15 @@ import CityCard from "../CityCard";
 
 const Teaser = ({ blok }) => {
   const [location, setLocation] = useState("");
-  console.log("blok", blok);
+  const [filteredCities, setFilteredCities] = useState(cities);
+  const handleOnChange = (ev) => {
+    let filtered = blok.filter((city) =>
+      city.toLowerCase().includes(ev.target.value)
+    );
+    setFilteredCities(filtered);
+  };
+  const formattedCity = (cityHeadline) => cityHeadline.replace("+", " ");
+
   const sunrise = blok.sunrise;
   const sunset = blok.sunset;
   const sunriseTime = sunrise?.slice(10);
@@ -103,6 +111,24 @@ const Teaser = ({ blok }) => {
           temp={blok.temp}
           imageSrc={weatherType ?? null}
         />
+      )}
+      {location === "/search" && (
+        <div className="Search">
+          <input
+            className="search-input"
+            type="text"
+            placeholder="Search.."
+            onChange={(ev) => handleOnChange(ev)}
+          ></input>
+          {!filteredCities.length && <p>nothing found!</p>}
+          {filteredCities.map((city) => (
+            <CityCard
+              name={formattedCity(city.headline)}
+              temp={city.temp}
+              imageSrc={weatherType ?? null}
+            />
+          ))}
+        </div>
       )}
     </div>
   );
