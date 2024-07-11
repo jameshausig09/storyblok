@@ -63,7 +63,6 @@ const Teaser = ({ blok }) => {
   return (
     <div className="overview">
       {location === "/overview" && (
-        // OVERVIEW PAGE
         <div {...storyblokEditable(blok)} className="Teaser">
           <div className="overview-box-item">
             {blok.headline && (
