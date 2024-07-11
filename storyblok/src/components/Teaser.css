@@ -48,17 +48,3 @@ padding: 20px;
 .overview-box-image {
     width: 30%;
 }
-
-.search-input {
-    padding: 6px;
-    border: 1px solid;
-    font-size: 17px;
-    border-radius: 6px;
-    margin-bottom: 20px;
-}
-
-.Search {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
